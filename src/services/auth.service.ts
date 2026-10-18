@@ -93,7 +93,6 @@ export class AuthService {
   async register(input: RegisterInput) {
     const { email, password, username, firstName, lastName, image, roles } =
       input
-
     if (!email || !password || !username) {
       throw new AppError(
         MESSAGE_EMAIL_USERNAME_PASSWORD_REQUIRED,
@@ -130,10 +129,10 @@ export class AuthService {
     if (existingUser) {
       throw new AppError(MESSAGE_USER_ALREADY_EXISTS, HTTP_BAD_REQUEST)
     }
-
+    
     const salt = generateSalt()
     const hashedPassword = authentication(salt, password)
-
+    
     const userRoles: Role[] = roles ?? [Role.USER]
 
     const newUser = await this.userRepository.create({

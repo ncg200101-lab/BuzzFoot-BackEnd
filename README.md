@@ -1,4 +1,5 @@
-# Node.js Express TypeScript MongoDB Boilerplate
+# BuzzFoot BackEnd
+Node.js Express TypeScript MongoDB Boilerplate
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 

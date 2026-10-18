@@ -38,7 +38,8 @@ export class AuthController {
     async (req: Request, res: Response, next: NextFunction) => {
       const { email, password, username, firstname, lastname, image, roles } =
         req.body
-      const result = await this.authService.register({
+      
+        const result = await this.authService.register({
         email,
         password,
         username,
